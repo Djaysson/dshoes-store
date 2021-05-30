@@ -1,11 +1,12 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
 
-function App() {
+export default function App() {
   return (
-    <div className="app">
-    <h2>Hello Redux</h2>
-    </div>
+   <BrowserRouter>
+   <Routes />
+   </BrowserRouter>
   );
 }
 
-export default App;
