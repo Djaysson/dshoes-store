@@ -5,6 +5,11 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
   margin: 50px 0;
+
+  img{
+      width: 90px;
+      height: 50px;
+  }
 `;
 
 export const Cart = styled(Link)`
@@ -28,4 +33,5 @@ transition: opacity 0.2s;
       font-size: 12px;
       color: #999;
   }
+
 `;

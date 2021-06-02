@@ -26,8 +26,5 @@ export default createGlobalStyle`
   button{
       cursor: pointer;
   }
-  img{
-      width: 80px;
-      height: 60px;
-  }
+
 `;
