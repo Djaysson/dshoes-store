@@ -1,0 +1,96 @@
+{
+    "stock": [
+        {
+            "id": 1,
+            "amount": 3
+        },
+        {
+            "id": 2,
+            "amount": 5
+        },
+        {
+            "id": 3,
+            "amount": 4
+        },
+        {
+            "id": 4,
+            "amount": 1
+        },
+        {
+            "id": 5,
+            "amount": 5
+        },
+        {
+            "id": 6,
+            "amount": 7
+        },
+        {
+            "id": 7,
+            "amount": 4
+        },
+        {
+            "id": 8,
+            "amount": 2
+        },
+        {
+            "id": 9,
+            "amount": 3
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "title": "Tênis Nike Downshifter Masculino",
+            "price": 179.9,
+            "image": "https://static.netshoes.com.br/produtos/tenis-nike-downshifter-11-masculino/50/HZM-5208-050/HZM-5208-050_zoom5.jpg?ts=1620698859&"
+        },
+        {
+            "id": 2,
+            "title": "Tênis Adidas Breaknet Masculino",
+            "price": 180.9,
+            "image": "https://static.netshoes.com.br/produtos/tenis-adidas-breaknet-masculino/28/NQQ-4378-028/NQQ-4378-028_zoom4.jpg?ts=1602007259&"
+        },
+        {
+            "id": 3,
+            "title": "Tênis Nike Venture Runner Masculino",
+            "price": 359.7,
+            "image": "https://static.netshoes.com.br/produtos/tenis-nike-venture-runner-masculino/40/HZM-3712-040/HZM-3712-040_zoom5.jpg?ts=1622142554&"
+        },
+        {
+            "id": 4,
+            "title": "Tênis Nike Renew Elevate",
+            "price": 135.8,
+            "image": "https://static.netshoes.com.br/produtos/tenis-nike-renew-elevate/68/HZM-4098-068/HZM-4098-068_zoom2.jpg?ts=1604600885&"
+        },
+        {
+            "id": 5,
+            "title": "Tênis Nike Legend Essential Masculino",
+            "price": 228.4,
+            "image": "https://static.netshoes.com.br/produtos/tenis-nike-legend-essential-2-masculino/12/HZM-4400-112/HZM-4400-112_zoom5.jpg?ts=1621481687&"
+        },
+        {
+            "id": 6,
+            "title": "Tênis Asics Gel-Lyte Masculino Brancoverde Limao",
+            "price": 159.5,
+            "image": "https://static.netshoes.com.br/produtos/tenis-asics-gel-lyte-iii-masculino-brancoverde-limao-38/07/2FV-7108-407/2FV-7108-407_zoom1.jpg?ts=1622310506"
+        },
+        {
+            "id": 7,
+            "title": "Tênis Columbia Drainmaker Masculino",
+            "price": 199.0,
+            "image": "https://static.netshoes.com.br/produtos/tenis-columbia-drainmaker-iv-masculino/10/D45-0938-010/D45-0938-010_zoom3.jpg?ts=1622140254&"
+        },
+        {
+            "id": 8,
+            "title": "Tênis Bebe Infantil Casual Menino",
+            "price": 210.0,
+            "image": "https://static.netshoes.com.br/produtos/tenis-bebe-e-infantil-casual-fxb-menino/48/LUR-0020-048/LUR-0020-048_zoom1.jpg?ts=1622658362"
+        },
+        {
+            "id": 9,
+            "title": "TênisNike Revolution Masculino",
+            "price": 240.6,
+            "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-masculino/44/HZM-1731-844/HZM-1731-844_zoom1.jpg?ts=1604057285"
+        }
+    ]
+}
