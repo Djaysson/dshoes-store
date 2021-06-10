@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { MdRemoveCircleOutline, MdAddCircleOutline, MdDelete } from 'react-icons/md'
 
@@ -7,6 +7,7 @@ import { Container, ProductTable, Total } from './styles';
 
 export default function Cart() {
     const cart = useSelector((state) => state.cart)
+    const dispatch = useDispatch();
     return (
         <Container>
             <ProductTable>
@@ -44,7 +45,7 @@ export default function Cart() {
                                 <strong>R$259,80</strong>
                             </td>
                             <td>
-                                <button type="buttton">
+                                <button type="buttton" onClick={() => dispatch({ type: 'REMOVE_FROM_CART', id: product.id })}>
                                     <MdDelete size={20} color="#1521b3" />
                                 </button>
                             </td>
