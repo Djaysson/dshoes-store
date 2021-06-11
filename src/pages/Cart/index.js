@@ -1,14 +1,22 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { MdRemoveCircleOutline, MdAddCircleOutline, MdDelete } from 'react-icons/md'
-
+import { formatPrice } from '../../util/format';
 import * as CardActions from '../../store/modules/cart/actions';
 
 import { Container, ProductTable, Total } from './styles';
 
 
 export default function Cart() {
-    const cart = useSelector((state) => state.cart)
+    const cart = useSelector(state => state.cart.map(product => ({
+        ...product,
+        subtotal: formatPrice(product.price * product.amount),
+    })));
+
+    const totalPrice = useSelector(state =>
+        formatPrice(state.cart.reduce((total, product) => total + product.price * product.amount, 0))
+    );
+
     const dispatch = useDispatch();
     return (
         <Container>
@@ -44,7 +52,7 @@ export default function Cart() {
                                 </div>
                             </td>
                             <td>
-                                <strong>R$259,80</strong>
+                                <strong>{product.subtotal}</strong>
                             </td>
                             <td>
                                 <button type="buttton" onClick={() => dispatch(CardActions.removeFromCart(product.id))}>
@@ -61,7 +69,7 @@ export default function Cart() {
                 </button>
                 <Total>
                     <span>TOTAL</span>
-                    <strong>R$1920,28</strong>
+                    <strong>{totalPrice}</strong>
                 </Total>
             </footer>
         </Container>
