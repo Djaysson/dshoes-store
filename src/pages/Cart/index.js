@@ -34,11 +34,11 @@ export default function Cart() {
                             </td>
                             <td>
                                 <div>
-                                    <button type="buttton">
+                                    <button type="buttton" onClick={() => dispatch(CardActions.updateAmount(product.id, product.amount - 1))}>
                                         <MdRemoveCircleOutline size={20} color="#1521b3" />
                                     </button>
                                     <input type="number" readOnly value={product.amount} />
-                                    <button type="buttton">
+                                    <button type="buttton" onClick={() => dispatch(CardActions.updateAmount(product.id, product.amount + 1))}>
                                         <MdAddCircleOutline size={20} color="#1521b3" />
                                     </button>
                                 </div>
