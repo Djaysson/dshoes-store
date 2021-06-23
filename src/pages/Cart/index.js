@@ -7,6 +7,7 @@ import * as CardActions from '../../store/modules/cart/actions';
 import { Container, ProductTable, Total } from './styles';
 
 
+
 export default function Cart() {
     const cart = useSelector(state => state.cart.map(product => ({
         ...product,
@@ -32,7 +33,7 @@ export default function Cart() {
                 </thead>
                 <tbody>
                     {cart.map(product => (
-                        <tr>
+                        <tr key={product.id}>
                             <td>
                                 <img src={product.image} alt={product.title} />
                             </td>
@@ -42,11 +43,11 @@ export default function Cart() {
                             </td>
                             <td>
                                 <div>
-                                    <button type="buttton" onClick={() => dispatch(CardActions.updateAmount(product.id, product.amount - 1))}>
+                                    <button type="buttton" onClick={() => dispatch(CardActions.updateAmountRequest(product.id, product.amount - 1))}>
                                         <MdRemoveCircleOutline size={20} color="#1521b3" />
                                     </button>
                                     <input type="number" readOnly value={product.amount} />
-                                    <button type="buttton" onClick={() => dispatch(CardActions.updateAmount(product.id, product.amount + 1))}>
+                                    <button type="buttton" onClick={() => dispatch(CardActions.updateAmountRequest(product.id, product.amount + 1))}>
                                         <MdAddCircleOutline size={20} color="#1521b3" />
                                     </button>
                                 </div>
