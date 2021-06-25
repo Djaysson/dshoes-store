@@ -10,7 +10,6 @@ import GlobalStyle from './styles/global';
 import Header from './components/Header/index';
 import Routes from './routes';
 
-
 import store from './store/store';
 
 export default function App() {
@@ -21,7 +20,7 @@ export default function App() {
         <Routes />
         <GlobalStyle />
         <ToastContainer autoClose={3000} />
-      </BrowserRouter >
+      </BrowserRouter>
     </Provider>
   );
 }

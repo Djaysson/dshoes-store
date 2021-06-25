@@ -1,5 +1,20 @@
-import styled from 'styled-components';
-import { darken } from 'polished';
+import styled, { keyframes } from 'styled-components'; import { darken } from 'polished';
+import { FaSpinner } from 'react-icons/fa';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const LoadingIcon = styled(FaSpinner)`
+  animation: ${rotate} 2000ms infinite linear;
+  display: block;
+  margin: 0 auto;
+`;
+
 export const Container = styled.div`
   padding: 30px;
   background-color: #FFF;
@@ -25,6 +40,21 @@ export const Container = styled.div`
             background: ${darken(0.04, '#1521b3')} ;
         }
     }
+  }
+  @media(min-width: 300px) and (max-width: 767px){
+    padding: 10px;
+    
+  footer{
+    flex-direction: column-reverse;
+  }
+
+  button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+  }
+       
+
   }
 `;
 export const ProductTable = styled.table`
@@ -69,6 +99,85 @@ export const ProductTable = styled.table`
     border: 0;
     padding: 6px;
   }
+  @media(min-width: 300px) and (max-width: 767px){
+
+    thead{
+      display: none;
+    }
+  
+    tbody tr{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+   
+    }
+
+    tbody td{
+      padding: 10px;
+
+      &:first-child {
+        padding-left: 0;
+        padding-bottom: 0;
+      }
+      &:nth-child(2) {
+        flex: 1 1 40%;
+        span {
+            font-size: 14px;
+            color: #666;
+        }
+      }
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {   
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      &:nth-child(3) {
+        padding: 0;
+        flex: 1;
+        div {
+            justify-content: flex-start;
+          }
+        }
+      
+      &:nth-child(4) {
+        flex: 1;
+        text-align: center;
+        font-size: 16px;
+        display: none;
+        }
+      &:nth-child(5) {
+        padding: 12px 0;
+      }
+      
+      img{
+        height: 100px;
+      }
+
+      input {
+        width: 36px;
+      }
+    }
+  }
+
+`;
+
+export const EmptyCartContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  svg {
+    margin-bottom: 10px;
+  }
+  strong {
+    color: #999;
+  }
+  @media(min-width: 300px) and (max-width: 767px){
+    min-height: 400px;
+  }
 `;
 export const Total = styled.div`
   display: flex;
@@ -82,4 +191,6 @@ export const Total = styled.div`
       font-size: 28px;
       margin-left: 5px;
   }
+ 
+ 
 `;

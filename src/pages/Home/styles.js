@@ -1,23 +1,63 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+import { FaSpinner } from 'react-icons/fa';
 import { darken } from 'polished';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const LoadingIcon = styled(FaSpinner)`
+  animation: ${rotate} 2000ms infinite linear;
+`;
+
+export const Container = styled.div`
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  strong {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+  }
+`;
+
 export const ProductList = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   list-style: none;
-  
-  li{
+  ${props => {
+    let styles = '';
+    for (let i = 0; i < props.length; i += 1) {
+      styles += `
+        li:nth-child(${i + 1}) {
+          animation: product-card-appear 300ms;
+          animation-fill-mode: backwards;
+          animation-delay: ${i * 50}ms;
+        }
+      `;
+    }
+    return css`
+      ${styles}
+    `;
+  }}
+  li {
     display: flex;
     flex-direction: column;
-    background-color: #FFF;
+    background: #fff;
     border-radius: 4px;
     padding: 20px;
-
-    img{
-      align-self: center;
+    img {
       max-width: 250px;
+      align-self: center;
     }
-    > strong {  
+    > strong {
       font-size: 16px;
       line-height: 20px;
       color: #333;
@@ -28,9 +68,9 @@ export const ProductList = styled.ul`
       font-weight: bold;
       margin: 5px 0 20px;
     }
-    button{
-      background: #1521b3;
-      color: #FFF;
+    button {
+      background: #7159c1;
+      color: #fff;
       border: 0;
       border-radius: 4px;
       overflow: hidden;
@@ -38,25 +78,30 @@ export const ProductList = styled.ul`
       display: flex;
       align-items: center;
       transition: background 0.2s;
-      
-      &:hover{
-        background: ${darken(0.04, '#1521b3')} ;
+      &:hover {
+        background: ${darken(0.05, '#7159c1')};
       }
-      div{
+      div {
         display: flex;
         align-items: center;
         padding: 12px;
-        background: rgba(0,0,0,0.1);
-
+        background: rgba(0, 0, 0, 0.1);
         svg {
           margin-right: 5px;
         }
       }
-      span{
+      span {
         flex: 1;
         text-align: center;
         font-weight: bold;
       }
     }
+  }
+
+  @media(min-width: 300px) and (max-width: 767px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media(min-width: 768px) and (max-width: 979px){
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
