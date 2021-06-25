@@ -69,7 +69,7 @@ export const ProductList = styled.ul`
       margin: 5px 0 20px;
     }
     button {
-      background: #7159c1;
+      background: #1521b3;
       color: #fff;
       border: 0;
       border-radius: 4px;
@@ -79,7 +79,7 @@ export const ProductList = styled.ul`
       align-items: center;
       transition: background 0.2s;
       &:hover {
-        background: ${darken(0.05, '#7159c1')};
+        background: ${darken(0.05, '#1521b3')};
       }
       div {
         display: flex;

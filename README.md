@@ -35,10 +35,20 @@
 - Calcula o total dos produtos no carrinho
 
 <h1 align="center">
-    <img alt="Booster" title="Booster" src="././src/assets/images/projeto.png" width="700px" />
+    <img alt="Project image" title="Project image" src="././src/assets/images/projeto.png" width="800px" />
+</h1>
+<h1 style="display:flex; justify-content: center;" >
+    <img alt="Mobile project image" title="Mobile project image" src="././src/assets/images/mobilehome.png" width="400px" />
+    <img alt="Mobile project image" title="Mobile project image" src="././src/assets/images/mobilecart.png" width="400px" />
 </h1>
 
-## Tecnologias
+<p align="center">
+  <a href="https://dstoreshoes.netlify.app" target="_blank">
+    <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1563043495/readme_logos/demo_on_netlify_bbuvjz.png">
+  </a>
+</p>
+
+## 🚀 Tecnologias
 
 -  [ReactJS](https://reactjs.org/)
 -  [Redux](https://redux.js.org/)
@@ -51,7 +61,7 @@
 -  [Reactotron](https://github.com/infinitered/reactotron)
 -  [React-icons](https://react-icons.github.io/react-icons/)
 
-## Como Executar
+## ℹ️ Como Executar
 
 - ### **Pré-requisitos**
 
@@ -82,5 +92,5 @@
 ```
 
 
-
+Feito com ❤️ por Djayson Rodrigues 👋 [Entrar em contato!](https://www.linkedin.com/in/djaysonrodrigues/)
 
