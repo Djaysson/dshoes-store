@@ -43,7 +43,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://dstoreshoes.netlify.app" target="_blank">
+  <a href="https://dstoreshoes.netlify.app" target="blank">
     <img alt="Demo on Netlify" src="https://res.cloudinary.com/lukemorales/image/upload/v1563043495/readme_logos/demo_on_netlify_bbuvjz.png">
   </a>
 </p>
@@ -79,16 +79,14 @@
 2. Executando a Aplicação:
 
 ```sh
-  # Aplicação web
+  # Vá para o repositório 
   $ cd Dstore_shoes
+
   # Instalando as dependências do projeto.
   $ yarn install # ou npm install
-  # Inicie a aplicação web
+
+  # Execute o app 
   $ yarn start # ou npm start
-
-  # Inicie a API Json-server na porta 3333
-  $ npx json-server --watch -p 3333 server.json
-
 ```
 
 
