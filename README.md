@@ -24,15 +24,8 @@
 
 ## 💻 Projeto
 
-**Dstore shoes** é um aplicação Web que consiste em uma loja online de vendas de tênis, suas funcionalidades estão distribuidas em:
+**Dstore_shoes** é uma aplicação web feita com ReactJS que consiste em uma loja online de venda de tênis.
 
-- Lista os produtos na pagina inicial
-- Lista os produtos adicionados no carrinho
-- Remover produtos do carrinho
-- Adiciona produtos no carrinho
-- Alterar a quantidade de produtos no carrinho
-- Calcula o subtotal dos produtos no carrinho
-- Calcula o total dos produtos no carrinho
 
 <h1 align="center">
     <img alt="Project image" title="Project image" src="././src/assets/images/projeto.png" width="800px" />
