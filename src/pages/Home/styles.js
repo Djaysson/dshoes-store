@@ -1,6 +1,6 @@
-import styled, { keyframes, css } from 'styled-components';
-import { FaSpinner } from 'react-icons/fa';
-import { darken } from 'polished';
+import styled, { keyframes, css } from "styled-components";
+import { FaSpinner } from "react-icons/fa";
+import { darken } from "polished";
 
 const rotate = keyframes`
   from {
@@ -28,12 +28,14 @@ export const Container = styled.div`
 `;
 
 export const ProductList = styled.ul`
+  margin-top: 6rem;
+  height: calc(100% - 60px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   list-style: none;
-  ${props => {
-    let styles = '';
+  ${(props) => {
+    let styles = "";
     for (let i = 0; i < props.length; i += 1) {
       styles += `
         li:nth-child(${i + 1}) {
@@ -50,26 +52,46 @@ export const ProductList = styled.ul`
   li {
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: #fefffe;
     border-radius: 4px;
     padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     img {
       max-width: 250px;
       align-self: center;
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
     > strong {
-      font-size: 16px;
+      font-size: 1.13rem;
       line-height: 20px;
       color: #333;
       margin-top: 5px;
     }
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+
+      strong {
+        font-size: 1rem;
+        color: #04d483;
+      }
+      span {
+        color: #aaa;
+        font-size: 0.88rem;
+      }
+    }
     > span {
-      font-size: 21px;
+      font-size: 1.3rem;
       font-weight: bold;
       margin: 5px 0 20px;
     }
     button {
-      background: #1521b3;
+      background: #5a2d82;
       color: #fff;
       border: 0;
       border-radius: 4px;
@@ -79,7 +101,7 @@ export const ProductList = styled.ul`
       align-items: center;
       transition: background 0.2s;
       &:hover {
-        background: ${darken(0.05, '#1521b3')};
+        background: ${darken(0.05, "#5a2d82")};
       }
       div {
         display: flex;
@@ -98,10 +120,10 @@ export const ProductList = styled.ul`
     }
   }
 
-  @media(min-width: 300px) and (max-width: 767px){
+  @media (min-width: 300px) and (max-width: 767px) {
     grid-template-columns: repeat(1, 1fr);
   }
-  @media(min-width: 768px) and (max-width: 979px){
+  @media (min-width: 768px) and (max-width: 979px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;
